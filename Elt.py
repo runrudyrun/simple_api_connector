@@ -11,7 +11,6 @@ class ELTProcessor:
         self.table_name = table_name
 
     def run(self):
-        # создаем в raw слое таблицу если её еще нет
         create_table_query = f'''
             CREATE TABLE IF NOT EXISTS {self.schema_name}.{self.table_name} (
             id SERIAL PRIMARY KEY,
@@ -20,11 +19,9 @@ class ELTProcessor:
             '''
         self.database.execute_query(create_table_query)
 
-        # Получение данных из API
         data = self.api_connector.get_data()
         data = json.dumps(data).replace("'", "''")
  
-        # Загрузка данных в базу данных без изменений
         insert_query = f"INSERT INTO {self.schema_name}.{self.table_name} (data) VALUES ('{data}')"
         self.database.execute_query(insert_query)
 
