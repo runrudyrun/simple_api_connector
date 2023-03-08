@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_url = os.getenv("API_URL")
-api_key = os.getenb("API_KEY")
+api_key = os.getenv("API_KEY")
 db_host = os.getenv("DB_HOST")
 db_port = os.getenv("DB_PORT")
 db_name = os.getenv("DB_NAME")

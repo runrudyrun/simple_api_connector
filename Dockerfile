@@ -1,12 +1,12 @@
-FROM python:3.9-slim-buster
+FROM python:3.10-slim-bullseye
 
 WORKDIR /app
 
 COPY requirements.txt .
 
-RUN apt-get update && apt-get -y install cron python3
+RUN apt-get update && apt-get -y install cron
 
-ENV PYTHONPATH "${PYTHONPATH}:/usr/local/lib/python3.9/site-packages"
+RUN /usr/local/bin/python -m pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 

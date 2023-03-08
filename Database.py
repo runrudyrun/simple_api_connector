@@ -14,7 +14,6 @@ class Database:
         with self.conn.cursor() as cur:
             cur.execute(query)
             self.conn.commit()
-            result = cur.fetchall()
             cur.close()
 
-        return result
+        return 

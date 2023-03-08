@@ -1,5 +1,6 @@
 from Connector import APIConnector
 from Database import Database
+import json
 
 
 class ELTProcessor:
@@ -14,13 +15,14 @@ class ELTProcessor:
         create_table_query = f'''
             CREATE TABLE IF NOT EXISTS {self.schema_name}.{self.table_name} (
             id SERIAL PRIMARY KEY,
-            data TEXT NOT NULL
+            data json NOT NULL
             )
             '''
         self.database.execute_query(create_table_query)
 
         # Получение данных из API
         data = self.api_connector.get_data()
+        data = json.dumps(data)
  
         # Загрузка данных в базу данных без изменений
         insert_query = f"INSERT INTO {self.schema_name}.{self.table_name} (data) VALUES ('{data}')"
