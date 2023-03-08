@@ -34,4 +34,4 @@ Here is test assignment for Data Engineer position. This project implements a si
 
 ## License
 
-Information is distributed under MIT License
+Information is distributed under [MIT License](LICENSE)
