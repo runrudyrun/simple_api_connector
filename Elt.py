@@ -14,7 +14,8 @@ class ELTProcessor:
         create_table_query = f'''
             CREATE TABLE IF NOT EXISTS {self.schema_name}.{self.table_name} (
             id SERIAL PRIMARY KEY,
-            data json NOT NULL
+            data JSON NOT NULL
+            created_dttm TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
             '''
         self.database.execute_query(create_table_query)
