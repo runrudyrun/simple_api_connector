@@ -6,26 +6,27 @@ Here is test assignment for Data Engineer position. This project implements a si
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
 - [License](#license)
 
 ## Installation
 
-* Clone this repository 
+* Clone this repository via `git clone https://github.com/runrudyrun/simple_api_connector.git`
+* Move to project folder
+* Change .env variables to Yours
+* Run `docker build -t open_api_etl_process_name . `
 
 ## Usage
+* Change variables in .env file to your ones
+* Run `docker run -d --name container_name -v /path/to/local/logs:/app/logs your_app_image`
 
-Instructions on how to use the project and any relevant code examples.
+## TO DO
 
-## Contributing
+* Various tests:
+- to test connection to api
+- to test connection to database and presence of schema specified
+- to test result of elt process
 
-Instructions on how to contribute to the project, guidelines for code style, and how to set up a development environment.
-
-## Tests
-
-Instructions on how to run the tests for the project and any relevant code examples.
 
 ## License
 
-Information about the project's license.
+Information is distributed under MIT License
