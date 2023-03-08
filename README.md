@@ -10,14 +10,19 @@ Here is test assignment for Data Engineer position. This project implements a si
 
 ## Installation
 
-* Clone this repository via `git clone https://github.com/runrudyrun/simple_api_connector.git`
+* Clone this repository via  `git clone https://github.com/runrudyrun/simple_api_connector.git`
 * Move to project folder
 * Change .env variables to Yours
-* Run `docker build -t open_api_etl_process_name . `
+* Run  `docker build -t open_api_etl_process_name . `
 
 ## Usage
+### Docker
 * Change variables in .env file to your ones
-* Run `docker run -d --name container_name -v /path/to/local/logs:/app/logs your_app_image`
+* Run  `docker run -d --name container_name -v /path/to/local/logs:/app/logs your_app_image`
+### Locally
+* Change variables in .env file to your ones
+* Install requirements  `pip install -r requirements.txt`
+* Run  `python run_elt.py`
 
 ## TO DO
 

@@ -10,6 +10,8 @@ RUN /usr/local/bin/python -m pip install --upgrade pip
 
 RUN pip install -r requirements.txt
 
+COPY .env .
+
 COPY Connector.py .
 
 COPY Database.py .
