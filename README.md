@@ -27,9 +27,9 @@ Here is test assignment for Data Engineer position. This project implements a si
 ## TO DO
 
 * Various tests:
-- to test connection to api
-- to test connection to database and presence of schema specified
-- to test result of elt process
+    - to test connection to api
+    - to test connection to database and presence of schema specified
+    - to test result of elt process
 
 
 ## License
