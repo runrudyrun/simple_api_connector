@@ -1,1 +1,1 @@
-*/5 * * * * /usr/local/bin/python /app/run_elt.py >> /var/log/elt.log 2>&1
+0 9,22 * * * /usr/local/bin/python /app/run_elt.py >> /var/log/elt.log 2>&1
